@@ -27,6 +27,8 @@ const nextConfig: NextConfig = {
     ],
     webVitalsAttribution: ['CLS', 'LCP'],
     webpackMemoryOptimizations: true,
+    workerThreads: false,
+    cpus: 1,
   },
   async headers() {
     return [
