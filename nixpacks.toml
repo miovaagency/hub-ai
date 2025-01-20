@@ -1,5 +1,5 @@
 [phases.setup]
-      nixPkgs = ['pnpm', 'bun']
+      nixPkgs = ['pnpm', 'bun', 'npm', 'corepack']
 
 [phases.install]
       cmds = ['npm install -g corepack', 'corepack enable', 'corepack prepare pnpm@9.15.3 --activate', 'NODE_OPTIONS=--max-old-space-size=8192 pnpm install']
