@@ -8,4 +8,4 @@
       cmds = ['NODE_OPTIONS=--max-old-space-size=6144 pnpm run build']
 
 [start]
-      cmd = 'pnpm start'
+      cmd = 'NODE_OPTIONS=--max-old-space-size=6144 pnpm start'
