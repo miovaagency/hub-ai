@@ -2,7 +2,7 @@
       nixPkgs = ['pnpm', 'bun']
 
 [phases.install]
-      cmds = ["pnpm add -g pnpm",'NODE_OPTIONS=--max-old-space-size=8192 pnpm install']
+      cmds = ['NODE_OPTIONS=--max-old-space-size=8192 pnpm install']
 
 [phases.build]
       cmds = ['NODE_OPTIONS=--max-old-space-size=8192 pnpm run build']
