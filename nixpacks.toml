@@ -2,7 +2,7 @@
       nixPkgs = ['pnpm', 'bun']
 
 [phases.install]
-      cmds = ['NODE_OPTIONS=--max-old-space-size=6144 pnpm install']
+      cmds = ["npm install esbuild ", 'NODE_OPTIONS=--max-old-space-size=6144 pnpm install']
 
 [phases.build]
       cmds = ['NODE_OPTIONS=--max-old-space-size=6144 pnpm run build']
