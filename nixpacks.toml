@@ -2,10 +2,10 @@
 nixPkgs = ['pnpm', 'bun']
 
 [phases.install]
-cmds = ['pnpm install']
+cmds = ['bun install']
 
 [phases.build]
-cmds = ['pnpm run build']
+cmds = ['bun run build']
 
 [start]
-cmd = 'pnpm start'
+cmd = 'bun start'
