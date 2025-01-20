@@ -324,6 +324,7 @@
   "pnpm": {
     "overrides": {
       "core-js": "3.40.0",
+      "core-js-pure": "3.40.0",
       "esbuild": "0.23.1",
       "mdast-util-gfm-autolink-literal": "2.0.0"
     },
