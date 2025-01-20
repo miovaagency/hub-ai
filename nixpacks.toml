@@ -2,10 +2,10 @@
       nixPkgs = ['pnpm', 'bun']
 
 [phases.install]
-      cmds = ['pnpm install --max-old-space-size=6144']
+      cmds = ['NODE_OPTIONS=--max-old-space-size=6144 pnpm install']
 
 [phases.build]
-      cmds = ['pnpm run build --max-old-space-size=6144']
+      cmds = ['NODE_OPTIONS=--max-old-space-size=6144 pnpm run build']
 
 [start]
       cmd = 'pnpm start'
