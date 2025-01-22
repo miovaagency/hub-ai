@@ -2,10 +2,10 @@
       nixPkgs = ['pnpm', 'bun', 'nodejs', 'husky']
 
 [phases.install]
-      cmds = ['npm install -g corepack', 'corepack enable', 'corepack prepare pnpm@9.15.4 --activate', 'NODE_OPTIONS=--max-old-space-size=4096 pnpm install']
+      cmds = ['npm install -g corepack', 'corepack enable', 'corepack prepare pnpm@9.15.4 --activate', 'NODE_OPTIONS=--max-old-space-size=8192 pnpm install']
 
 [phases.build]
-      cmds = ['NODE_OPTIONS=--max-old-space-size=4096 pnpm run build']
+      cmds = ['NODE_OPTIONS=--max-old-space-size=8192 pnpm run build']
 
 [start]
-      cmd = 'NODE_OPTIONS=--max-old-space-size=4096 pnpm start'
+      cmd = 'NODE_OPTIONS=--max-old-space-size=8192 pnpm start'
