@@ -6,13 +6,13 @@ cmds = [
   'npm install -g corepack', 
   'corepack enable', 
   'corepack prepare pnpm@9.15.9 --activate', 
-  'NODE_OPTIONS=--max-old-space-size=8192 pnpm install'
+  'NODE_OPTIONS=--max-old-space-size=4096 pnpm install'
 ]
 
 [phases.build]
 cmds = [
-  'NODE_OPTIONS=--max-old-space-size=8192 NEXT_TELEMETRY_DISABLED=1 SKIP_TYPE_CHECK=true pnpm run build'
+  'NODE_OPTIONS=--max-old-space-size=4096 NEXT_TELEMETRY_DISABLED=1 SKIP_TYPE_CHECK=true pnpm run build'
 ]
 
 [start]
-cmd = 'NODE_OPTIONS=--max-old-space-size=8192 pnpm start'
+cmd = 'NODE_OPTIONS=--max-old-space-size=4096 pnpm start'
