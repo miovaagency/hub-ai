@@ -1,5 +1,3 @@
-import { combineKeys } from '@lobehub/ui/es/Hotkey';
-
 import {
   HotkeyEnum,
   HotkeyGroupEnum,
@@ -7,6 +5,8 @@ import {
   HotkeyScopeEnum,
   KeyEnum,
 } from '@/types/hotkey';
+
+const combineKeys = (keys: string[]) => keys.join('+');
 
 // mod 在 Mac 上是 command 键，alt 在 Win 上是 ctrl 键
 export const HOTKEYS_REGISTRATION: HotkeyRegistration = [
@@ -34,7 +34,7 @@ export const HOTKEYS_REGISTRATION: HotkeyRegistration = [
     group: HotkeyGroupEnum.Essential,
     id: HotkeyEnum.ToggleLeftPanel,
     keys: combineKeys([KeyEnum.Mod, KeyEnum.BracketLeft]),
-    scopes: [HotkeyScopeEnum.Chat],
+    scopes: [HotkeyScopeEnum.Chat, HotkeyScopeEnum.Files],
   },
   {
     group: HotkeyGroupEnum.Essential,
@@ -86,6 +86,12 @@ export const HOTKEYS_REGISTRATION: HotkeyRegistration = [
     id: HotkeyEnum.EditMessage,
     keys: combineKeys([KeyEnum.Alt, KeyEnum.LeftDoubleClick]),
     nonEditable: true,
+    scopes: [HotkeyScopeEnum.Chat],
+  },
+  {
+    group: HotkeyGroupEnum.Conversation,
+    id: HotkeyEnum.ClearCurrentMessages,
+    keys: combineKeys([KeyEnum.Alt, KeyEnum.Shift, KeyEnum.Backspace]),
     scopes: [HotkeyScopeEnum.Chat],
   },
 ];

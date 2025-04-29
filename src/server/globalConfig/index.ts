@@ -33,6 +33,9 @@ export const getServerGlobalConfig = async () => {
         enabledKey: 'ENABLED_GITEE_AI',
         modelListKey: 'GITEE_AI_MODEL_LIST',
       },
+      lmstudio: {
+        fetchOnClient: isDesktop ? false : undefined,
+      },
       /* ↓ cloud slot ↓ */
 
       /* ↑ cloud slot ↑ */
@@ -40,8 +43,9 @@ export const getServerGlobalConfig = async () => {
         enabled: isDesktop ? true : undefined,
         fetchOnClient: isDesktop ? false : !process.env.OLLAMA_PROXY_URL,
       },
-      openai: {
-        enabled: isDesktop ? false : undefined,
+      tencentcloud: {
+        enabledKey: 'ENABLED_TENCENT_CLOUD',
+        modelListKey: 'TENCENT_CLOUD_MODEL_LIST',
       },
       volcengine: {
         withDeploymentName: true,
