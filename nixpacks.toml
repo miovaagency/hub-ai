@@ -1,23 +1,20 @@
 [phases.setup]
-nixPkgs = ['pnpm', 'nodejs']
+nixPkgs = ['pnpm', 'bun', 'nodejs', 'husky']
 
 [phases.install]
 cmds = [
   'npm install -g corepack',
   'corepack enable',
   'corepack prepare pnpm@10.10.0 --activate',
-  # --frozen-lockfile'ı kaldırıp --no-frozen-lockfile kullanın
-  'NODE_OPTIONS="--max-old-space-size=6144" pnpm install --no-frozen-lockfile'
+  # Belleği install aşamasında da yüksek tutmak iyi olabilir
+  'NODE_OPTIONS=--max-old-space-size=6144 pnpm install'
 ]
 
 [phases.build]
 cmds = [
-  'NODE_OPTIONS="--max-old-space-size=6144" NEXT_TELEMETRY_DISABLED=1 SKIP_TYPE_CHECK=true pnpm run build'
+  # Build aşaması için bellek limitini 8GB'a çıkarın
+  'NODE_OPTIONS=--max-old-space-size=6144 NEXT_TELEMETRY_DISABLED=1 SKIP_TYPE_CHECK=true pnpm run build'
 ]
 
 [start]
-cmd = 'NODE_OPTIONS="--max-old-space-size=2048" pnpm start'
-
-[variables]
-NODE_ENV = 'production'
-NEXT_TELEMETRY_DISABLED = '1'
+cmd = 'NODE_OPTIONS=--max-old-space-size=6144 pnpm start' # Başlangıç için 4GB yeterli olabilir, isterseniz burayı da artırabilirsiniz.
