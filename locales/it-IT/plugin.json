@@ -54,11 +54,19 @@
         "placeholder": "Ad esempio: --port 8080 --debug",
         "required": "Inserisci i parametri di avvio"
       },
+      "avatar": {
+        "label": "Icona del plugin"
+      },
       "command": {
         "desc": "File eseguibile o script per avviare il plugin MCP STDIO",
         "label": "Comando",
         "placeholder": "Ad esempio: python main.py o /path/to/executable",
         "required": "Inserisci il comando di avvio"
+      },
+      "desc": {
+        "desc": "Descrizione del plugin",
+        "label": "Descrizione del plugin",
+        "placeholder": "Aggiungi informazioni sull'uso e sugli scenari del plugin"
       },
       "endpoint": {
         "desc": "Inserisci l'indirizzo del tuo server HTTP Streamable MCP",
@@ -103,7 +111,7 @@
         "title": "Tipo di plugin MCP"
       },
       "url": {
-        "desc": "Inserisci l'indirizzo HTTP Streamable del tuo server MCP, che non deve terminare con /sse",
+        "desc": "Inserisci il tuo indirizzo HTTP Streamable del server MCP, il supporto per la modalità SSE non è disponibile",
         "invalid": "Inserisci un URL valido",
         "label": "URL Endpoint HTTP",
         "required": "Inserisci l'URL del servizio MCP"
@@ -211,8 +219,24 @@
     "content": "Caricamento del plugin in corso...",
     "plugin": "Esecuzione del plugin in corso..."
   },
+  "localSystem": {
+    "apiName": {
+      "listLocalFiles": "Visualizza elenco file",
+      "moveLocalFiles": "Sposta file",
+      "readLocalFile": "Leggi contenuto file",
+      "renameLocalFile": "Rinomina",
+      "searchLocalFiles": "Cerca file",
+      "writeLocalFile": "Scrivi file"
+    },
+    "title": "File locali"
+  },
   "pluginList": "Elenco dei plugin",
   "search": {
+    "apiName": {
+      "crawlMultiPages": "Leggi il contenuto di più pagine",
+      "crawlSinglePage": "Leggi contenuto pagina",
+      "search": "Cerca pagina"
+    },
     "config": {
       "addKey": "Aggiungi chiave",
       "close": "Rimuovi",

@@ -54,11 +54,19 @@
         "placeholder": "على سبيل المثال: --port 8080 --debug",
         "required": "يرجى إدخال معلمات التشغيل"
       },
+      "avatar": {
+        "label": "أيقونة الإضافة"
+      },
       "command": {
         "desc": "الملف القابل للتنفيذ أو البرنامج النصي المستخدم لبدء ملحق MCP STDIO",
         "label": "الأمر",
         "placeholder": "على سبيل المثال: python main.py أو /path/to/executable",
         "required": "يرجى إدخال أمر التشغيل"
+      },
+      "desc": {
+        "desc": "أضف وصفًا للإضافة",
+        "label": "وصف الإضافة",
+        "placeholder": "أضف معلومات حول كيفية استخدام هذه الإضافة وسيناريوهاتها وغيرها"
       },
       "endpoint": {
         "desc": "أدخل عنوان خادم MCP Streamable HTTP الخاص بك",
@@ -103,7 +111,7 @@
         "title": "نوع ملحق MCP"
       },
       "url": {
-        "desc": "أدخل عنوان HTTP القابل للبث لخادم MCP الخاص بك، ولا ينتهي بـ /sse",
+        "desc": "أدخل عنوان HTTP القابل للبث لخادم MCP الخاص بك، لا يدعم وضع SSE",
         "invalid": "يرجى إدخال عنوان URL صالح",
         "label": "عنوان URL لنقطة نهاية HTTP",
         "required": "يرجى إدخال عنوان URL لخدمة MCP"
@@ -211,8 +219,24 @@
     "content": "جاري استدعاء الإضافة...",
     "plugin": "جاري تشغيل الإضافة..."
   },
+  "localSystem": {
+    "apiName": {
+      "listLocalFiles": "عرض قائمة الملفات",
+      "moveLocalFiles": "نقل الملفات",
+      "readLocalFile": "قراءة محتوى الملف",
+      "renameLocalFile": "إعادة تسمية",
+      "searchLocalFiles": "البحث عن الملفات",
+      "writeLocalFile": "كتابة في الملف"
+    },
+    "title": "الملفات المحلية"
+  },
   "pluginList": "قائمة الإضافات",
   "search": {
+    "apiName": {
+      "crawlMultiPages": "قراءة محتوى صفحات متعددة",
+      "crawlSinglePage": "قراءة محتوى الصفحة",
+      "search": "بحث في الصفحة"
+    },
     "config": {
       "addKey": "إضافة مفتاح",
       "close": "حذف",
