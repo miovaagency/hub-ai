@@ -32,7 +32,7 @@
     "prebuild": "tsx scripts/prebuild.mts",
     "build": "next build",
     "postbuild": "npm run build-sitemap && npm run build-migrate-db",
-    "build-migrate-db": "pnpm run db:migrate",
+    "build-migrate-db": "bun run db:migrate",
     "build-sitemap": "tsx ./scripts/buildSitemapIndex/index.ts",
     "build:analyze": "NODE_OPTIONS=--max-old-space-size=6144 ANALYZE=true next build",
     "build:docker": "npm run prebuild && DOCKER=true next build && npm run build-sitemap",
@@ -114,9 +114,6 @@
       "stylelint --fix",
       "eslint --fix"
     ]
-  },
-  "overrides": {
-    "mdast-util-gfm-autolink-literal": "2.0.0"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
@@ -373,5 +370,8 @@
         }
       }
     }
+  },
+  "overrides": {
+    "mdast-util-gfm-autolink-literal": "2.0.0"
   }
 }
